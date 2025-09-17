@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(..specifyscriptspowershellcreate-new-feature.ps1 -Json \"Build a Sell-in-Thirds Trading Tracker web application that helps retail traders implement and monitor the sell-in-thirds trading strategy with breakeven progression stop-loss management. The app should allow users to add stock positions with buy price and shares, automatically calculate sell targets at +50% and +100% gains, manage stop-loss levels that progress from -20% to breakeven as sales occur, and provide an interactive price slider for scenario analysis. Include real-time position tracking, risk management visualization, and a dark-themed responsive interface optimized for financial data display.\")",
+      "Bash(powershell:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
