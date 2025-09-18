@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark theme financial interface styles */
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-dark-bg-primary text-dark-text-primary antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Financial data typography */
+  .font-financial {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Remove default form styling */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  /* Financial value display components */
+  .financial-positive {
+    @apply text-financial-profit;
+  }
+
+  .financial-negative {
+    @apply text-financial-loss;
+  }
+
+  .financial-neutral {
+    @apply text-financial-neutral;
+  }
+
+  /* Interactive elements */
+  .btn-primary {
+    @apply bg-financial-target hover:bg-financial-target-dark text-white font-medium py-2 px-4 rounded-financial transition-colors focus:outline-none focus:ring-2 focus:ring-financial-target focus:ring-offset-2 focus:ring-offset-dark-bg-primary;
+  }
+
+  .btn-secondary {
+    @apply border border-dark-border-secondary text-dark-text-secondary hover:text-dark-text-primary hover:border-dark-border-primary rounded-financial transition-colors focus:outline-none focus:ring-2 focus:ring-dark-border-primary focus:ring-offset-2 focus:ring-offset-dark-bg-primary;
+  }
+
+  .btn-danger {
+    @apply bg-financial-loss hover:bg-financial-loss-dark text-white font-medium py-2 px-4 rounded-financial transition-colors focus:outline-none focus:ring-2 focus:ring-financial-loss focus:ring-offset-2 focus:ring-offset-dark-bg-primary;
+  }
+
+  /* Form inputs */
+  .input-field {
+    @apply w-full px-3 py-2 bg-dark-surface-secondary border border-dark-border-secondary rounded-financial text-dark-text-primary placeholder-dark-text-muted focus:border-financial-target focus:outline-none focus:ring-1 focus:ring-financial-target;
+  }
+
+  .input-error {
+    @apply border-financial-loss focus:border-financial-loss focus:ring-financial-loss;
+  }
+
+  /* Card components */
+  .card {
+    @apply bg-dark-surface-primary border border-dark-border-primary rounded-financial p-6;
+  }
+
+  .card-secondary {
+    @apply bg-dark-surface-secondary border border-dark-border-secondary rounded-financial p-4;
+  }
+
+  /* Status indicators */
+  .status-active {
+    @apply bg-financial-target/20 text-financial-target;
+  }
+
+  .status-partial {
+    @apply bg-financial-profit/20 text-financial-profit;
+  }
+
+  .status-closed {
+    @apply bg-dark-text-muted/20 text-dark-text-muted;
+  }
+
+  .status-warning {
+    @apply bg-financial-stopLoss/20 text-financial-stopLoss;
+  }
+
+  .status-danger {
+    @apply bg-financial-loss/20 text-financial-loss;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-price-update {
+    animation: price-update 0.3s ease-out;
+  }
+
+  .animate-profit-pulse {
+    animation: profit-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-loss-pulse {
+    animation: loss-pulse 2s ease-in-out infinite;
+  }
+
+  /* Accessibility utilities */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Focus utilities for keyboard navigation */
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-financial-target focus:ring-offset-2 focus:ring-offset-dark-bg-primary;
+  }
+
+  /* High contrast utilities for accessibility */
+  .high-contrast {
+    @apply contrast-125 brightness-110;
+  }
+
+  /* Print utilities */
+  @media print {
+    .print-hidden {
+      display: none !important;
+    }
+
+    .print-visible {
+      display: block !important;
+    }
+  }
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-surface-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-border-primary rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-border-secondary;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-financial-target/30 text-dark-text-primary;
+}
+
+::-moz-selection {
+  @apply bg-financial-target/30 text-dark-text-primary;
+}

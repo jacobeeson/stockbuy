@@ -1,0 +1,97 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Lock files (keep package-lock.json for consistent installs)
+# yarn.lock
+# pnpm-lock.yaml
+
+# Build outputs
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing coverage
+coverage/
+.nyc_output/
+.jest/
+
+# Cache directories
+.cache/
+.eslintcache
+.stylelintcache
+.parcel-cache/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows specific
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
+logs/
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Vite specific
+.vite-inspect/
+
+# TypeScript
+*.tsbuildinfo
+
+# Spec-Kit methodology files (keep these - they're part of the project)
+# .specify/
+
+# Temporary files
+.tmp/
+.temp/
+
+# Editor backup files
+*~
+.#*
+\#*#
+.*.swp
+.*.swo
+
+# Local development
+.local/
